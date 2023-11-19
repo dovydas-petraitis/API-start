@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>    
+    <title>Boostrap Demo</title>
+</head>
+<body>
+
+    <section class="container">
+        <h2>Filmo paieška</h2>
+        <form>
+            <div class="form-group">
+                <input type="text" class="form-control m-5" placeholder="Ivesk filmo pavadinimą">                
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary m-3">Paieska</button>
+            </div>
+        </form>
+    </section>
+
+    <main class="container">
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th>Pavadinimas</th>
+                    <th>Trukme</th>
+                    <th>Režisierius</th>
+                    <th>Metai</th>
+                    <th>IMDB reitingas</th>
+                    <th>Kita</th>
+                    <th>Posteris</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="title"></td>
+                    <td class="time"></td>
+                    <td class="director"></td>
+                    <td class="year"></td>
+                    <td class="imdb"></td>
+                    <td class="other"></td>
+                    <td><img class="poster"></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="alert alert-danger" style="display:none;" role="alert">
+            Movie not found!
+        </div>
+    </main>
+
+    <section class="places container">
+
+        <!---- Sukurkite su JS dataList, kuriame butu visos Lietuvos vietoves
+        Duomenys yra siame servise:
+        https://api.meteo.lt/v1/places
+        -->
+        
+        <input list="places" placeholder="Iveskite vietove">
+        <dataList id="places">
+      
+        </dataList>
+    </section>
+
+</body>
+<script src="js/app.js"></script>
+</html>
